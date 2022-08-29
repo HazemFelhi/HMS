@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: php-pod
+  labels:
+     name: php-pod
+     app: hms
+spec:
+  containers:
+    - name: php
+      image: 51469752/hms_php:v1
+      ports:
+        - containerPort: 80
+  

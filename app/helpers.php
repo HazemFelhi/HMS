@@ -42,7 +42,7 @@ function getLoggedInUser()
  */
 function getAvatarUrl()
 {
-    return '//ui-avatars.com/api/';
+    return 'https://www.kindpng.com/imgv/ixJxxh_transparent-avatar-png-male-avatar-icon-transparent-png';
 }
 
 /**

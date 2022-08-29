@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: php-deploy
+  labels:
+    name: php-deploy
+    app: hms
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: php-pod
+      app: hms
+  template:
+    metadata:
+      name: php-pod
+      labels:
+        name: php-pod
+        app: hms
+    spec:
+      containers:
+        - name: php
+          image: 51469752/hms_php:v1
+          ports:
+            - containerPort: 80
+  

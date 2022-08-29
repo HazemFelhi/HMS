@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: smtp-deploy
+  labels:
+    name: smtp-deploy
+    app: hms
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: smtp-pod
+      app: hms
+  template:
+    metadata:
+      name: smtp-pod
+      labels:
+        name: smtp-pod
+        app: hms
+    spec:
+      containers:
+        - name: smtp
+          image: namshi/smtp
+          ports:
+            - containerPort: 587 

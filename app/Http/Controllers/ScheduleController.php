@@ -184,6 +184,7 @@ class ScheduleController extends AppBaseController
             }
         }
 
+
         $check = HospitalSchedule::where('day_of_week', $dayName)->exists();
         if (! $check) {
             return $this->sendError('This Day Hospital is Closed.');

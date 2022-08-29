@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: smtp-pod
+  labels:
+    name: smtp-pod
+    app: hms
+spec:
+  containers:
+    - name: smtp
+      image: namshi/smtp
+      ports:
+        - containerPort: 587 
+  
